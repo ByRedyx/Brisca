@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="PiskyBrisky.Usernames"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PiskyBrisky"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="300" MinWidth="300">
+            <TextBlock x:Name="txbTitol" HorizontalAlignment="Center" FontSize="18" Width="300" Margin="0,0,0,10"/>
+            <TextBox x:Name="txbNom" HorizontalAlignment="Left" PlaceholderText="Nom" Width="300" MaxLength="20" KeyDown="txtNom_KeyDown"/>
+            <Button x:Name="btnIntroduir" HorizontalAlignment="Right" Content="Introduir" Click="Introduir_Click" Margin="0,10,0,0"/>
+            <TextBlock x:Name="txbError" Foreground="Red" Margin="0,10,0,0" Width="300" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Page>

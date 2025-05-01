@@ -1,0 +1,44 @@
+﻿<UserControl x:ConnectionId='1'
+    x:Class="PiskyBrisky.View.MyJugador"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PiskyBrisky.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    x:Name="uscRoot">
+
+    <Grid x:ConnectionId='2' x:Name="gridJugador" Background="LightSkyBlue" BorderBrush="Black" BorderThickness="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding ElementName=uscRoot,Path=ElJugador.Nom}" Grid.Column="0" FontSize="15" HorizontalAlignment="Left" Margin="10"></TextBlock>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="10" Background="White" Width="50" Height="40">
+            <TextBlock x:ConnectionId='7' x:Name="txbPunts" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:ConnectionId='4' x:Name="imgCartaJugador1" Source="ms-appx:///Cards/back.png" Grid.RowSpan="2" Grid.Column="0" Margin="2" Tag="1"                       DataContext="{Binding ElementName=uscRoot, Path=ElJugador.Carta1}"></Image>
+            <Image x:ConnectionId='5' x:Name="imgCartaJugador2" Source="ms-appx:///Cards/back.png" Grid.RowSpan="2" Grid.Column="1" Margin="2" Tag="2"                       DataContext="{Binding ElementName=uscRoot, Path=ElJugador.Carta2}"></Image>
+            <Image x:ConnectionId='6' x:Name="imgCartaJugador3" Source="ms-appx:///Cards/back.png" Grid.RowSpan="2" Grid.Column="2" Margin="2" Tag="3"                       DataContext="{Binding ElementName=uscRoot, Path=ElJugador.Carta3}"></Image>
+        </Grid>
+        <Button x:ConnectionId='3' x:Name="btnJugar" Visibility="Visible" IsEnabled="False" FontSize="10" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5" Background="Gray"                       >Jugar</Button>
+    </Grid>
+</UserControl>
+

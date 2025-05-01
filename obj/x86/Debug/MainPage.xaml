@@ -1,0 +1,71 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="PiskyBrisky.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PiskyBrisky"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="using:PiskyBrisky.View"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        >
+
+    <Grid x:ConnectionId='2' x:Name="grdMain" Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <view:MyJugador x:ConnectionId='3' x:Name="view1" ElJugador="{Binding}" Grid.Column="2" Grid.Row="0"></view:MyJugador>
+        <view:MyJugador x:ConnectionId='4' x:Name="view2" ElJugador="{Binding}" Grid.Column="0" Grid.Row="2"></view:MyJugador>
+        <view:MyJugador x:ConnectionId='5' x:Name="view3" ElJugador="{Binding}" Grid.Column="2" Grid.Row="4"></view:MyJugador>
+        <view:MyJugador x:ConnectionId='6' x:Name="view4" ElJugador="{Binding}" Grid.Column="4" Grid.Row="2"></view:MyJugador>
+
+        <Grid x:ConnectionId='7' x:Name="grdCentre" Grid.Row="2" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image x:ConnectionId='8' x:Name="imgBrisca" Source="Cards/back.png" Visibility="Visible" HorizontalAlignment="Right" Grid.ColumnSpan="3" RenderTransformOrigin="0.5, 0.5">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="90"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:ConnectionId='9' x:Name="imgPila" Source="Cards/back.png" Visibility="Visible" VerticalAlignment="Center" Grid.ColumnSpan="3"/>
+
+            <TextBlock x:ConnectionId='10' x:Name="txbWinner" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Grid.Row="0" Grid.ColumnSpan="4" TextWrapping="Wrap"/>
+            <Button x:ConnectionId='11' x:Name="btnNewGame" Visibility="Collapsed" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Tornar a Jugar" Grid.Row="2" Grid.ColumnSpan="4"                         />
+            
+            <StackPanel x:ConnectionId='12' x:Name="spCarta1" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center">
+                <Image x:ConnectionId='19' x:Name="imgCarta1" Source="Cards/back.png" Visibility="Collapsed" Margin="10"/>
+            </StackPanel>
+            <StackPanel x:ConnectionId='13' x:Name="spCarta2" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
+                <Image x:ConnectionId='18' x:Name="imgCarta2" Source="Cards/back.png" Visibility="Collapsed" Margin="10"/>
+            </StackPanel>
+            <StackPanel x:ConnectionId='14' x:Name="spCarta3" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center">
+                <Image x:ConnectionId='17' x:Name="imgCarta3" Source="Cards/back.png" Visibility="Collapsed" Margin="10"/>
+            </StackPanel>
+            <StackPanel x:ConnectionId='15' x:Name="spCarta4" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center">
+                <Image x:ConnectionId='16' x:Name="imgCarta4" Source="Cards/back.png" Visibility="Collapsed" Margin="10"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
+
